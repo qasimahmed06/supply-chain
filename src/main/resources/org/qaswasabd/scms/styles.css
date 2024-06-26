@@ -1,0 +1,121 @@
+.title{
+    -fx-background-color:
+            linear-gradient(to bottom right, #8EC5FC, #E0C3FC),
+            linear-gradient(to bottom right, #8EC5FC, #E0C3FC);
+    -fx-background-insets: 0, 100%;
+    -fx-background-radius: 0;
+}
+.button-match-theme {
+    -fx-background-color: #ACB5FF;
+    -fx-text-fill: black;
+    -fx-font-family: Montserrat;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, #8c9aff, 10, 0, 0, 0);
+}
+
+.windowbar{
+    -fx-background-color:
+        linear-gradient(to bottom right, #729FC9, #AE9AE2),
+        linear-gradient(to bottom right, #729FC9, #AE9AE2);
+}
+
+.button-match-theme:hover {
+    -fx-font-family: Montserrat;
+    -fx-effect: dropshadow(three-pass-box, #8c9aff, 30, 0, 0, 0);
+}
+
+.closebtn {
+    -fx-background-color: transparent;
+    -fx-background-image: url("close.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+}
+
+.minimizebtn {
+    -fx-background-color: transparent;
+    -fx-background-image: url("minimize.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+}
+
+.windowbtn {
+    -fx-background-color: transparent;
+    -fx-background-image: url("window.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+}
+.windowbtn:hover{
+    -fx-background-color:
+            linear-gradient(to bottom right, #497cab, #886dcd),
+            linear-gradient(to bottom right, #467bad, #7a60bb);
+}
+.closebtn:hover{
+    -fx-background-color:
+            linear-gradient(to bottom right, #497cab, #886dcd),
+            linear-gradient(to bottom right, #467bad, #7a60bb);
+}
+.minimizebtn:hover{
+    -fx-background-color:
+            linear-gradient(to bottom right, #497cab, #886dcd),
+            linear-gradient(to bottom right, #467bad, #7a60bb);
+}
+
+.backbtn {
+    -fx-background-color: transparent;
+    -fx-background-image: url("back.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 60px;
+}
+.backbtn:hover{
+    -fx-background-color:
+            linear-gradient(to bottom right, #eff2eb, #e6f0df),
+            linear-gradient(to bottom right, #eff2eb, #e6f0df);
+}
+
+.backbtn:pressed{
+    -fx-background-color:
+            linear-gradient(to bottom right, #c6e1c3, #b9d7ab),
+            linear-gradient(to bottom right, #c6e1c3, #b9d7ab);;
+}
+
+.btn{
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-border-color: black;
+    -fx-background-radius: 10px;
+
+}
+
+.btn:hover{
+    -fx-background-color:
+            linear-gradient(to bottom right, #eff2eb, #e6f0df),
+            linear-gradient(to bottom right, #eff2eb, #e6f0df);
+    -fx-cursor: hand;
+    -fx-border-radius: 10px;
+    -fx-border-color: black;
+    -fx-background-radius: 10px;
+}
+
+.btn:pressed {
+    -fx-background-color:
+            linear-gradient(to bottom right, #c6e1c3, #b9d7ab),
+            linear-gradient(to bottom right, #c6e1c3, #b9d7ab);
+    -fx-border-radius: 10px;
+    -fx-border-color: black;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}

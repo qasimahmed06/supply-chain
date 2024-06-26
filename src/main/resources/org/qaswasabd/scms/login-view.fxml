@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="title" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.qaswasabd.scms.Controller">
+   <children>
+      <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="1280.0" styleClass="windowbar">
+         <children>
+            <Button fx:id="minimizeButton" mnemonicParsing="false" onMouseClicked="#handleMinimize" prefHeight="34.0" prefWidth="52.0" styleClass="minimizebtn" />
+            <Button fx:id="closeButton" mnemonicParsing="false" onMouseClicked="#handleClose" prefHeight="34.0" prefWidth="52.0" styleClass="closebtn" />
+         </children> <!-- Resize Icon -->
+      </HBox>
+      <Circle fill="#c3d4f4" layoutX="1187.0" layoutY="195.0" opacity="0.3" radius="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <Shadow>
+               <color>
+                  <Color opacity="0.49238577485084534" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="#c3d4f4" layoutX="177.0" layoutY="524.0" opacity="0.3" radius="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <Glow level="0.31" />
+         </effect>
+      </Circle>
+      <Circle fill="#c3d4f4" layoutX="87.0" layoutY="195.0" opacity="0.3" radius="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <SepiaTone level="0.76" />
+         </effect>
+      </Circle>
+      <Circle fill="#c3d4f4" layoutX="1083.0" layoutY="524.0" opacity="0.1" radius="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <Shadow height="4.66" radius="2.995" width="9.32">
+               <input>
+                  <DropShadow />
+               </input>
+               <color>
+                  <Color opacity="0.49238577485084534" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <GridPane alignment="CENTER" layoutX="428.0" layoutY="150.0" prefHeight="299.0" prefWidth="423.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="14.333358764648438" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="147.3333282470703" minHeight="10.0" prefHeight="123.99998474121094" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="148.3333435058594" minHeight="10.0" prefHeight="127.00001525878909" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="usernameField" prefHeight="70.0" prefWidth="212.0" promptText="admin" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Montserrat Regular" size="10.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordField1" prefHeight="68.0" prefWidth="212.0" promptText="admin" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Montserrat Regular" size="10.0" />
+               </font>
+            </PasswordField>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="225.0" text="Username:" textAlignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Montserrat Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="205.0" text="Password:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Montserrat Regular" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="passwordField1_shown" prefHeight="68.0" prefWidth="212.0" promptText="admin" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Montserrat Regular" size="10.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button layoutX="481.0" layoutY="479.0" mnemonicParsing="false" onMouseClicked="#handleLogin" styleClass="button-match-theme" text="Login" />
+      <Button fx:id="changePassword" layoutX="646.0" layoutY="479.0" mnemonicParsing="false" onMouseClicked="#handlechangePasswordButtonClick" prefHeight="40.0" prefWidth="205.0" styleClass="button-match-theme" text="Change Password" />
+      <Label fx:id="errorLabel2" alignment="CENTER" layoutX="482.0" layoutY="431.0" prefHeight="30.0" prefWidth="369.0" textFill="#b53a3a">
+         <font>
+            <Font name="Montserrat Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="showPasswordButton3" layoutX="851.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleShowPasswordButtonClick" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fx:id="eyeIcon3" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@hidden.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

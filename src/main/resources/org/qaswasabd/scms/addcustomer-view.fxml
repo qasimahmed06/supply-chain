@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="title" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.qaswasabd.scms.Controller">
+   <children>
+      <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="1280.0" styleClass="windowbar">
+         <children>
+            <Button fx:id="minimizeButton" mnemonicParsing="false" onMouseClicked="#handleMinimize" prefHeight="34.0" prefWidth="52.0" styleClass="minimizebtn" />
+            <Button fx:id="closeButton" mnemonicParsing="false" onMouseClicked="#handleClose" prefHeight="34.0" prefWidth="52.0" styleClass="closebtn" />
+         </children> <!-- Resize Icon -->
+      </HBox>
+      <GridPane layoutX="469.0" layoutY="200.0" prefHeight="286.0" prefWidth="341.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="58.33332824707031" minHeight="10.0" prefHeight="58.33332824707031" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="88.66665649414062" minHeight="10.0" prefHeight="78.66668701171875" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="103.66665649414062" minHeight="10.0" prefHeight="71.33331298828125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="180.33333333333337" minHeight="10.0" prefHeight="76.66667683919272" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="147.33333333333331" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Customer ID">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Customer Name" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Contact Info" GridPane.rowIndex="2">
+                <font>
+                    <Font name="Montserrat Regular" size="12.0" />
+                </font>
+            </Label>
+            <Label GridPane.rowIndex="3">
+                <font>
+                    <Font name="Montserrat Regular" size="12.0" />
+                </font>
+            </Label>
+            <TextField fx:id="customerIDField" GridPane.columnIndex="1" />
+            <TextField fx:id="customerNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="contactInfoField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Address" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button layoutX="540.0" layoutY="552.0" mnemonicParsing="false" onMouseClicked="#handleAddCustomerClick" prefHeight="61.0" prefWidth="200.0" styleClass="button-match-theme" text="Add Customer">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="405.0" layoutY="89.0" prefHeight="76.0" prefWidth="470.0" text="Add Customer">
+         <font>
+            <Font name="Montserrat Black" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel19" alignment="CENTER" layoutX="540.0" layoutY="630.0" prefHeight="33.0" prefWidth="200.0" textFill="#b53a3a">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="27.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#handleCustomerManagement" styleClass="backbtn" />
+   </children>
+</AnchorPane>

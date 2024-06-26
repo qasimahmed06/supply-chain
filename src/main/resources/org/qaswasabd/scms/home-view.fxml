@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="title" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.qaswasabd.scms.Controller">
+   <children>
+      <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="1280.0" styleClass="windowbar">
+         <children>
+            <Button fx:id="minimizeButton" mnemonicParsing="false" onMouseClicked="#handleMinimize" prefHeight="34.0" prefWidth="52.0" styleClass="minimizebtn" />
+            <Button fx:id="closeButton" mnemonicParsing="false" onMouseClicked="#handleClose" prefHeight="34.0" prefWidth="52.0" styleClass="closebtn" />
+         </children> <!-- Resize Icon -->
+      </HBox>
+      <GridPane layoutY="30.0" prefHeight="689.0" prefWidth="1280.0" style="-fx-border-color: grey;">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" onMouseClicked="#handleOrderManagement" prefHeight="86.0" prefWidth="231.0" styleClass="btn" text="Order Management" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Montserrat Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" onMouseClicked="#handleInventoryMgmt" prefHeight="86.0" prefWidth="295.0" styleClass="btn" text="Inventory Management">
+               <font>
+                  <Font name="Montserrat Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" onMouseClicked="#handleSRM" prefHeight="86.0" prefWidth="275.0" styleClass="btn" text="Supplier Relationship&#10;Management" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Montserrat Regular" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
